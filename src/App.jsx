@@ -12,6 +12,7 @@ import Success from "./Components/Success";
 import Error from "./Components/Error";
 import { StateMachineProvider, createStore } from "little-state-machine";
 
+// Initialize the global store
 createStore({
   yourDetails: {
     name: "",
@@ -23,6 +24,7 @@ createStore({
 });
 
 const App = () => {
+  // Routes
   return (
     <StateMachineProvider>
       <Router>

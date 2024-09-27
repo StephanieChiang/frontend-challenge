@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import { useForm } from "react-hook-form";
 import updateAction from "../Helpers/updateAction";
-import "./styles.css";
 
 const Confirmation = () => {
   const navigate = useNavigate();
@@ -18,6 +17,7 @@ const Confirmation = () => {
 
   const onSubmit = async () => {
     setLoading(true);
+    // API call for the POST request
     try {
       await fetch("http://localhost:3001/api/submit", {
         method: "POST",

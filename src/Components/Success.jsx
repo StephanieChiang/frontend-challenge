@@ -4,7 +4,6 @@ import { useStateMachine } from "little-state-machine";
 import { useForm } from "react-hook-form";
 import clearAction from "../Helpers/clearAction";
 import successIcon from "../images/success.svg";
-import "./styles.css";
 
 const Success = () => {
   const navigate = useNavigate();

@@ -4,7 +4,6 @@ import { useStateMachine } from "little-state-machine";
 import { useForm } from "react-hook-form";
 import clearAction from "../Helpers/clearAction";
 import errorIcon from "../images/error.svg";
-import "./styles.css";
 
 const Error = () => {
   const navigate = useNavigate();

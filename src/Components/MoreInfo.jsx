@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../Helpers/updateAction";
-import "./styles.css";
 
 const MoreInfo = () => {
   const [colors, setColors] = useState("");
@@ -14,6 +13,7 @@ const MoreInfo = () => {
     defaultValues: state.yourDetails,
   });
 
+  // Api call to get the list of colors, wrap in try/catch just in case backend side fails
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,6 +25,7 @@ const MoreInfo = () => {
             setColors(data);
           });
       } catch (error) {
+        // Whatever you want to do when error happens, in this case, this scenario is not provided
         //console.log(error)
       }
     };
